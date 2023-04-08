@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding: 0px 100px;
+  width: 100%;
+  height: 90vh;
+}
+
+/* HEADER SECTION  */
+.navBar {
+  position: fixed;
+  padding: 0px 100px;
+  background-color: #fff;
+  width: 100%;
+  height: 90px;
+  box-shadow: 0px 2px 5px #aaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ff5500;
+}
+
+.links {
+  width: 50%;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.links ul li:hover a {
+  color: #ff5500;
+}
+
+/* HERO SECTION  */
+.heroSec {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/images/herobg.jpg);
+  background-position: center center;
+  background-size: cover;
+  color: #000;
+}
+
+.heroContent {
+  width: 750px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heroContent h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+.heroProfession {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.heroButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+
+.heroButtonsContainer button {
+  width: 150px;
+  height: 40px;
+  background-color: #ff5500;
+  color: #fff;
+  border: 2px solid #ff5500;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.heroButtonsContainer button:nth-child(2) {
+  width: 150px;
+  height: 40px;
+  background-color: transparent;
+  color: #ff5500;
+  border: 2px solid #ff5500;
+}
+
+/* SKILLS SECTION  */
+.skillsSec {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 90vh;
+}
+
+.skillsSec h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #ff5500;
+}
+.skillsGridContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skillsGridParent {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+}
+.singleSkill {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 1px 5px #aaa;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  flex-direction: column;
+}
+.singleSkill:hover {
+  transform: scale(1.05);
+}
+.singleSkill img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* PROJECTS SECTION  */
+.projectSec {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 90vh;
+}
+.projectSec h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #ff5500;
+}
+.projectssGridContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectssGridParent {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.singleProject {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 1px 5px #aaa;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.singleProject div {
+  width: 50%;
+}
+.projectImage {
+  width: 100%;
+  transition: 0.5s;
+}
+.singleProject:hover .projectImage {
+  transform: scale(1.05);
+}
+.projectContent {
+  z-index: 10;
+  text-align: left;
+}
+.projectContent h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.projectContent p {
+  font-size: 13px;
+}
+.projectContent div {
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projectContent div a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #ff5500;
+}
