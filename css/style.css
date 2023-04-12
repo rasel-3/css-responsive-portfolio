@@ -10,25 +10,25 @@
 section {
   padding: 0px 100px;
   width: 100%;
-  height: 90vh;
 }
 
 /* HEADER SECTION  */
 .navBar {
+  z-index: 1000;
   position: fixed;
   padding: 0px 100px;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 100%;
-  height: 90px;
-  box-shadow: 0px 2px 5px #aaa;
+  height: 50px;
+  box-shadow: 0px 2px 5px #777;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .logo span {
@@ -49,11 +49,10 @@ section {
 .links ul li a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  font-weight: bold;
   transition: 0.5s;
 }
-
-.links ul li:hover a {
+.links ul li a:hover {
   color: #ff5500;
 }
 
@@ -77,15 +76,16 @@ section {
   align-items: center;
   flex-direction: column;
 }
-
-.heroContent h1 {
+.heroTitle {
+  text-align: center;
   text-transform: uppercase;
   font-size: 60px;
 }
 
 .heroProfession {
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .heroButtonsContainer {
@@ -115,16 +115,17 @@ section {
 
 /* SKILLS SECTION  */
 .skillsSec {
+  background-color: #ff5500;
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
-  height: 90vh;
+  height: auto;
 }
 
 .skillsSec h2 {
   text-align: center;
   font-size: 40px;
-  color: #ff5500;
+  color: #fff;
 }
 .skillsGridContainer {
   margin-top: 30px;
@@ -141,8 +142,8 @@ section {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 1px 5px #aaa;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,7 +157,7 @@ section {
   transform: scale(1.05);
 }
 .singleSkill img {
-  width: 50px;
+  width: 90px;
   margin-bottom: 10px;
 }
 
@@ -165,7 +166,7 @@ section {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
-  height: 90vh;
+  height: auto;
 }
 .projectSec h2 {
   text-align: center;
@@ -185,7 +186,7 @@ section {
 }
 .singleProject {
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #ff5500;
   box-shadow: 0px 1px 5px #aaa;
   width: 500px;
   height: 200px;
@@ -196,6 +197,7 @@ section {
   text-align: center;
   transition: 0.5s;
   cursor: pointer;
+  color: #fff;
 }
 .singleProject div {
   width: 50%;
@@ -204,10 +206,8 @@ section {
   width: 100%;
   transition: 0.5s;
 }
-.singleProject:hover .projectImage {
-  transform: scale(1.05);
-}
 .projectContent {
+  padding: 0px 10px 0px 10px;
   z-index: 10;
   text-align: left;
 }
@@ -221,12 +221,137 @@ section {
 .projectContent div {
   margin-top: 20px;
   width: 80%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.projectImageContainer {
+  height: 100%;
+  overflow: hidden;
+}
+.singleProject:hover .projectImage {
+  transform: scale(1.05);
+}
 .projectContent div a {
   font-size: 14px;
   text-decoration: none;
-  color: #ff5500;
+  color: #040404;
+  font-weight: bold;
+}
+
+/* DESIGN FOR 1024PX OR BELOW SIZE  */
+@media only screen and (max-width: 1024px) {
+  section {
+    padding: 0px 50px;
+  }
+  .navBar {
+    padding: 0px 50px;
+  }
+  .skillsGridParent {
+    grid-template-columns: auto auto auto;
+  }
+  .singleProject {
+    width: 800px;
+  }
+  .projectssGridParent {
+    grid-template-columns: auto;
+  }
+}
+
+/* DESIGN FOR 806px OR BELOW SIZE  */
+@media only screen and (max-width: 806px) {
+  .links ul li a {
+    font-weight: 500;
+  }
+  .heroTitle {
+    font-size: 40px;
+  }
+  .skillsGridParent {
+    grid-template-columns: auto auto;
+  }
+  .singleProject {
+    width: 600px;
+  }
+}
+/* DESIGN FOR 611px OR BELOW SIZE  */
+@media only screen and (max-width: 611px) {
+  .heroTitle {
+    font-size: 40px;
+  }
+  .skillsGridParent {
+    grid-template-columns: auto auto;
+  }
+  .singleProject {
+    width: 500px;
+  }
+  .projectContent {
+    padding: 0px 5px 0px 10px;
+  }
+}
+/* DESIGN FOR 500px OR BELOW SIZE  */
+@media only screen and (max-width: 500px) {
+  section {
+    padding: 0px 30px;
+  }
+  .heroTitle {
+    font-size: 35px;
+  }
+  .skillsGridParent {
+    grid-template-columns: auto auto;
+  }
+  .singleProject {
+    width: auto;
+    height: auto;
+  }
+  .singleProject {
+    height: fit-content;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column !important;
+  }
+  .singleProject div {
+    width: 100%;
+  }
+  .projectImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.5s;
+  }
+  .projectContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    text-align: center;
+    padding: 0px 10px 20px 10px;
+  }
+  .projectDetails {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectContent div{
+    display: block;
+  }
+  .projectDetails h3{
+    margin: 0;
+  }
+  .projectContent div{
+    margin-top: 0;
+  }
+  .divLinkContainer {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 100px;
+    height: 20px !important !important;
+  }
+}
+
+/* DESIGN FOR 426px OR BELOW SIZE  */
+@media only screen and (max-width: 426px) {
+  .skillsGridParent {
+    grid-template-columns: auto ;
+  }
 }
